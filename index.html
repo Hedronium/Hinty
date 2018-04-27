@@ -14,12 +14,12 @@
     <script>
         Hinty(
             document.getElementById('area'),
-            (v, p, c) => {
-                if (v === 'hey:') {
-                    c('One', '1 - one', 'one');
-                    c('Two', '2 - two', 'two');
-                    c('Three', '3 - three', 'three');
-                    c('Four', '4 - four', 'four');
+            (content, caret_position, callback) => {
+                if (content === 'hey:') {
+                    callback('One', '1 - one', 'one');
+                    callback('Two', '2 - two', 'two');
+                    callback('Three', '3 - three', 'three');
+                    callback('Four', '4 - four', 'four');
                 }
             }
         );
