@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="Hinty.css">
+</head>
+<body>
+    <textarea name="area" id="area" rows=20 style="width: 60em;"></textarea>
+
+    <script src="Hinty.js"></script>
+    <script>
+        Hinty(
+            document.getElementById('area'),
+            (v, p, c) => {
+                if (v === 'hey:') {
+                    c('One', '1 - one', 'one');
+                    c('Two', '2 - two', 'two');
+                    c('Three', '3 - three', 'three');
+                    c('Four', '4 - four', 'four');
+                }
+            }
+        );
+    </script>
+</body>
+</html>

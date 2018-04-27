@@ -1,0 +1,60 @@
+.HintyContainer,
+.HintyContainer *,
+.HintyContainer *::after,
+.HintyContainer *::before {
+    box-sizing: border-box;
+}
+
+.HintyContainer {
+    position: relative;
+}
+
+.HintyCaret {
+    display: inline-block;
+    height: 1em;
+    width: 0.5px;
+}
+
+.HintyShadow, .HintyInterceptor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.HintyField {
+    position: absolute;
+    top: 0;
+    left: 0;
+    resize: none;
+}
+
+.HintyHints {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20em;
+    background: white;
+    box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.1);
+    min-height: 2em;
+    max-height: 40vh;
+    overflow-y: scroll;
+}
+
+.HintyHintsHidden {
+    display: none;
+}
+
+.HintyHint {
+    width: 100%;
+    padding: 1em;
+    border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.HintyHint:hover {
+    background: rgb(158, 200, 255);
+}
+
+.HintyHintActive {
+    background: rgb(193, 220, 255);
+}
