@@ -1,6 +1,18 @@
 ((window) => {
     const doc = window.document;
 
+    const findHint = (el) => {
+        if (el.className === 'HintyHints') {
+            return null;
+        }
+
+        if (el.className === 'HintyHint') {
+            return el;
+        } else {
+            return findHint(el.parentNode);
+        }
+    }
+
     const clearChildren = (el) => {
         while (el.firstChild) {
             el.removeChild(el.firstChild);
@@ -40,9 +52,7 @@
         const hints_container = makeHintContainer();
 
         hints_container.addEventListener('click', (ev) => {
-            let target = ev.path.find(el => {
-                return el.className === 'HintyHint';
-            });
+            let target = findHint(ev.target);
 
             if (target) {
                 off = target.dataset.off;
